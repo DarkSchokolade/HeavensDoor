@@ -57,7 +57,6 @@ client.on('message', (message) => {
     }
   }
 });
-
 client.login(process.env['BOT_TOKEN']);
 
 // Logs information about all the requests.
@@ -74,7 +73,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
   res.status('200').send({ status: 'active' });
 });
-app.use('/sso', require('./api/routes/sso'));
+// app.use('/sso', require('./api/routes/sso'));
 
 const PORT = process.env.PORT || 4000;
 const SERVER_IP = process.env.SERVER_IP || 'localhost';
