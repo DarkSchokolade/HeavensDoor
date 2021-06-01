@@ -1,0 +1,37 @@
+{
+  "name": "heavensdoor",
+  "version": "1.0.0",
+  "description": "IOT RF DOOR WITH DISCORD",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=development nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkSchokolade/HeavensDoor.git"
+  },
+  "keywords": [
+    "discord",
+    "js",
+    "smart",
+    "door"
+  ],
+  "author": "suhas.k.shetty hariharan.parthiban",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarkSchokolade/HeavensDoor/issues"
+  },
+  "homepage": "https://github.com/DarkSchokolade/HeavensDoor#readme",
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12"
+  }
+}
