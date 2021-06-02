@@ -14,6 +14,7 @@ const {
   WebSocketManager,
   Collection,
 } = require('discord.js');
+const sso = require('./api/middleware/sso');
 const client = new Client();
 client.commands = new Collection();
 
@@ -73,8 +74,9 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
   res.status('200').send({ status: 'active' });
 });
-// app.use('/sso', require('./api/routes/sso'));
-
+client.on('ready', () => {
+  app.use('/sso', sso(client));
+});
 const PORT = process.env.PORT || 4000;
 const SERVER_IP = process.env.SERVER_IP || 'localhost';
 

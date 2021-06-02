@@ -15,6 +15,28 @@ const AuthorizedSchema = mongoose.Schema(
     discordID: { type: String, required: true },
     masterKeyCard: { type: String },
     whiteList: [memberSchema],
+    recent: {
+      granted: {
+        key: {
+          type: String,
+          default: null,
+        },
+        timestamp: {
+          type: String,
+          default: null,
+        },
+      },
+      intrusion: {
+        key: {
+          type: String,
+          default: null,
+        },
+        timestamp: {
+          type: String,
+          default: null,
+        },
+      },
+    },
   },
   { minimize: false }
 );

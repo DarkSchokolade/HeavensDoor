@@ -4,12 +4,12 @@ const Authorized = require('../api/models/Authorized');
 const Iot = require('../api/models/Iot');
 module.exports.run = async (client, message, args) => {
   //RFID
-  console.log(args[0]); //RF_TAG
+  // console.log(args[0]); //RF_TAG
   let memberName = args[1];
   for (let i = 2; i < args.length; i++) {
     memberName += ' ' + args[i];
   }
-  console.log(memberName); //memberName
+  // console.log(memberName); //memberName
   // check IOT_ID existence
 
   let owner = await Authorized.findOne({ discordID: message.author.id });
